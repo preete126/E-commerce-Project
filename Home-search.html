@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="ToaddCart.css">
+
+    <title>Search</title>
+    <style>
+        #topdeal {
+
+            background-color: rgb(240, 241, 245);
+            width: 100%;
+            padding: 20px;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+        }
+        @media(max-width:1030px){
+            #descriptions{
+                display: none;
+            }
+            #padd{
+                padding: 10px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="heading">
+       
+            <main style="display: flex; justify-content: space-between;align-items: center; padding-top: 15px; ">
+                <div class="nav2">
+                    🎀 May&Make
+                    <div class="Ads">shop online without stress</div>
+                </div>
+                <form action="" class=" d-flex" id="form">
+                    <button id="category">All categories <img width="30px" src="arrow.png" alt=""></button>
+
+                    <input type="text" required class="" id="searchEng"
+                        placeholder="Search for product, brand & caregories...">
+                    <button id="search" onclick="Search(event)" class="btn bg-white"><img width="25px"
+                            src="search-sam.png" alt=""></button>
+                </form>
+
+                <div class="">
+                    <div onmousemove="Account()" onmouseleave="remP()">
+                        <button class="Account" style="position: relative; font-size: 17px; font-weight: 600;"><img width="20px" height="20px" style="margin-top: -10px;" src="me-sam.png" alt=""> Hi <span id="Username">Mubarokah</span> <img width="30px" src="arrow.png"
+                                alt=""> </button>
+                        <div class="Profile " style="top: 55px;" hidden>
+                            <div class="ps-2 ">
+                                <p style=" margin-bottom: -5px;">Welcome to <span
+                                        style="color: palevioletred; font-size: 20px;">May&Make!</span></p>
+                                <!-- <span style="font-size: 13px;">To access account and manage order</span> -->
+                               
+                                <div class="order">
+                                    <a href="Profile.html" >Edit Profile</a>
+                                    <a href="#" >My Order</a>
+                                    <a href="#" >My Cart</a>
+                                    <a href="#" >Wishlist</a>
+                                    <a href="#" >Payment</a>
+                                </div>
+                                <div class="mt-2">
+                                    <form action="landing-page.html" >
+                                        <button class="btn p-1 btn-success ps-3 pe-3 form-control w-50">Log out</button>
+                                    </form>
+                                   
+                                </div>
+                            </div>
+    
+    
+                        </div>
+    
+                    </div>
+                </div>
+                <a href="Home-cart.html">
+                    <div class="d-flex">
+
+                        <img class="cart" width="40px" src="cart.png" alt="">
+
+                        <div>
+                            <span class="cartIndex">0</span>
+                        </div>
+                    </div>
+                </a>
+            </main>
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-start" id="demo">
+        <div class="canvas pb-3">
+            <div class="offcanvas-header">
+                🎀May&Make Products
+                <button type="button" class="btn-close text-reset bg-light" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="title"> All categories </div>
+                <div>
+                    <button class="btn form-control text-start hover-effect" type="button">Women's Fashion</button>
+                    <button class="btn form-control text-start hover-effect" type="button">Men's Fashion</button>
+                    <button class="btn form-control text-start hover-effect" type="button">Phones and Telecommunications
+                    </button>
+                    <button class="btn form-control text-start hover-effect" type="button">Consumer Electronics</button>
+                    <button class="btn form-control text-start hover-effect" type="button">Computers, Office &
+                        Security</button>
+
+                    <button class="btn form-control text-start hover-effect" type="button">Furniture</button>
+                    <button class="btn form-control text-start hover-effect" type="button">Jewelry & watches</button>
+                    <button class="btn form-control text-start hover-effect" type="button">Home Appliances</button>
+                    <button class="btn form-control text-start hover-effect" type="button">Bags and Shoes</button>
+                    <button class="btn form-control text-start hover-effect" type="button">Toy,Kids & babies</button>
+                    <button class="btn form-control text-start hover-effect" type="button">Bags & Shoes</button>
+                    <button class="btn form-control text-start hover-effect" type="button">Beauty, Health and
+                        Hair</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <main id="items">
+
+        <div id="itemNav">
+
+            <button class="btn text-white fs-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                <img width="40px" src="side-bar.png" alt="">
+            </button>
+            <div class="d-flex gap-5 align-items-center text-white Dcategory">
+                <div class="categoryNavW" onmousemove="DForW()" onmouseleave="ForW()">Women
+                    <div class="Forwomen" style="top: 150px;" hidden>
+                        <div class="womenWear">
+                            <strong>Clothing</strong>
+                            <div class="text-secondary  ms-3">
+                                <a href="#">Topwear</a>
+                                <a href="#">Dresses</a>
+                                <a href="#">Jeans</a>
+                                <a href="#">Shorts</a>
+                                <a href="#">Skirts</a>
+                                <a href="#">Jeggings & Tights</a>
+                                <a href="#">Joggers & Capris</a>
+
+                            </div>
+                        </div>
+                        <div class="Lingerie">
+                            <strong>Lingerie & Sleep wear</strong>
+                            <div class="text-secondary  ms-3">
+                                <a href="#">Bras</a>
+                                <a href="#">panties</a>
+                                <a href="#">Lingerie sets</a>
+                                <a href="#">Night Dresses & Nighties</a>
+                                <a href="#">Shapewares</a>
+                                <a href="#">Camisoles & Slips</a>
+
+
+                            </div>
+                        </div>
+
+                        <div class="womenWear">
+                            <strong>Beauty & Grooming</strong>
+
+                            <div class="text-secondary  ms-3">
+                                <a href="#">Make up</a>
+                                <a href="#">Skin Care</a>
+                                <a href="#">Hair Care</a>
+                                <a href="#">Bath and Spa</a>
+                                <a href="#">Deodorants & perfumes</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="categoryNavM" onmousemove="DForM()" onmouseleave="ForM()">Men
+                    <div class="Formen" style="top: 150px;" hidden>
+                        <div class="womenWear">
+                            <strong>Clothing</strong>
+                            <div class="text-secondary  ms-3">
+                                <strong><a href="#" class="text-dark">Top Wear</a></strong>
+                                <a href="#">T-Shirt</a>
+                                <a href="#">Formal Shirts </a>
+                                <a href="#">Casual Shirts</a>
+                                <strong><a href="#" class="text-dark">Bottom Wear</a></strong>
+                                <a href="#">Jeans</a>
+                                <a href="#">Casual Trousers</a>
+                                <a href="#">Formal Trousers</a>
+                                <a href="#">Shorts</a>
+                                <a href="#">Track Pants</a>
+                                <a href="#">Cargos</a>
+                                <a href="#">Three Forths</a>
+
+
+
+                            </div>
+                        </div>
+                        <div class="Lingerie">
+                            <strong>Innerwear & Loungewear</strong>
+                            <div class="text-secondary  ms-3">
+                                <a href="#">Briefs & Trunks</a>
+                                <a href="#">Vests</a>
+                                <a href="#">Boxers</a>
+                                <a href="#">Pyjamas & Lounge Pants</a>
+                                <a href="#">Thermals</a>
+                                <a href="#">Night Suits</a>
+
+
+                            </div>
+                        </div>
+
+                        <div class="womenWear">
+                            <strong>Men's Grooming</strong>
+
+                            <div class="text-secondary  ms-3">
+                                <a href="#">Beards & Grooming</a>
+                                <a href="#">Shaving & AfterShaving</a>
+                                <a href="#">perfumes</a>
+                                <a href="#">Deodorants </a>
+                                <a href="#">Sexual Welless</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="categoryNavC" onmousemove="DForC()" onmouseleave="ForC()">Children
+                    <div class="Forchildren" style="top: 150px;" hidden>
+                        <div class="womenWear">
+                            <strong class="d-block">Clothing</strong>
+                            <div class="text-secondary  ms-3">
+                                <strong><a href="#" class="text-dark">Boys' Clothing</a></strong>
+                                <a href="#">T-Shirt</a>
+                                <a href="#">Ethnic Wears </a>
+                                <a href="#">Shorts</a>
+                                <a href="#">Shirts</a>
+                                <a href="#">Innerwears</a>
+                                <a href="#">Boys' Sweatshirts</a>
+
+
+                                <strong><a href="#" class="text-dark">Girls' Clothing</a></strong>
+                                <a href="#">Dresses & Skirts</a>
+                                <a href="#">T-shirts & Top </a>
+                                <a href="#">Ethnic Wear</a>
+                                <a href="#">Innerwears</a>
+                                <a href="#">Girls' Sweatshirts</a>
+
+                            </div>
+                        </div>
+                        <div class="Lingerie">
+                            <strong>Toys</strong>
+                            <div class="text-secondary  ms-3">
+                                <a href="#">Remote Control Toys</a>
+                                <a href="#"> Educational Toys</a>
+                                <a href="#"> Soft Toys</a>
+                                <a href="#">Cars & Die-cast Vehicles</a>
+                                <a href="#">Outdoor Toys</a>
+                                <a href="#">Action Figures</a>
+                                <a href="#"> Board Games</a>
+                                <a href="#"> Musical Toys</a>
+                                <a href="#">Dolls & Doll Houses</a>
+                                <a href="#"> Puzzles</a>
+                                <a href="#"> S.T.E.M Toys</a>
+                                <a href="#"> Helicopter & Drones</a>
+                                <a href="#">Toy Guns</a>
+                                <a href="#">Party Supplies</a>
+
+
+                            </div>
+                        </div>
+
+                        <div class="Footware">
+                            <strong>Babies Grooming & care</strong>
+
+                            <div class="text-secondary  ms-3">
+                                <a href="#"> Baby Bath, Hair & Skin Care</a>
+                                <a href="#"> Baby Grooming</a>
+                                <a href="#"> Baby Bathing Accessories</a>
+                                <a href="#"> Baby Gift Sets & Combo </a>
+                                <a href="#"> Baby Oral Care</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="categoryNavB">Bags
+                    <div class="Forchildren" hidden>
+                        <div class="womenWear">
+                            <strong class="d-block">Clothing</strong>
+                            <div class="text-secondary  ms-3">
+                                <strong><a href="#" class="text-dark">Boys' Clothing</a></strong>
+                                <a href="#">T-Shirt</a>
+                                <a href="#">Ethnic Wears </a>
+                                <a href="#">Shorts</a>
+                                <a href="#">Shirts</a>
+                                <a href="#">Innerwears</a>
+                                <a href="#">Boys' Sweatshirts</a>
+
+
+                                <strong><a href="#" class="text-dark">Girls' Clothing</a></strong>
+                                <a href="#">Dresses & Skirts</a>
+                                <a href="#">T-shirts & Top </a>
+                                <a href="#">Ethnic Wear</a>
+                                <a href="#">Innerwears</a>
+                                <a href="#">Girls' Sweatshirts</a>
+
+                            </div>
+                        </div>
+                        <div class="Lingerie">
+                            <strong>Toys</strong>
+                            <div class="text-secondary  ms-3">
+                                <a href="#">Remote Control Toys</a>
+                                <a href="#"> Educational Toys</a>
+                                <a href="#"> Soft Toys</a>
+                                <a href="#">Cars & Die-cast Vehicles</a>
+                                <a href="#">Outdoor Toys</a>
+                                <a href="#">Action Figures</a>
+                                <a href="#"> Board Games</a>
+                                <a href="#"> Musical Toys</a>
+                                <a href="#">Dolls & Doll Houses</a>
+                                <a href="#"> Puzzles</a>
+                                <a href="#"> S.T.E.M Toys</a>
+                                <a href="#"> Helicopter & Drones</a>
+                                <a href="#">Toy Guns</a>
+                                <a href="#">Party Supplies</a>
+                            </div>
+                        </div>
+
+                        <div class="beauty">
+                            <strong>Babies Grooming & care</strong>
+
+                            <div class="text-secondary  ms-3">
+                                <a href="#"> Baby Bath, Hair & Skin Care</a>
+                                <a href="#"> Baby Grooming</a>
+                                <a href="#"> Baby Bathing Accessories</a>
+                                <a href="#"> Baby Gift Sets & Combo </a>
+                                <a href="#"> Baby Oral Care</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="categoryNavJ" onmousemove="DforJ()" onmouseleave="ForJ()">jewelries
+                    <div class="Forjewelry" style="top: 150px;" hidden>
+                        <div class="womenWear">
+                            <strong class="d-block"> Jewellery</strong>
+                            <div class="text-secondary  ms-3">
+                                <strong><a href="#" class="text-dark">Women's jewelries</a></strong>
+                                <a href="#"> Artificial Jewellery</a>
+                                <a href="#">Silver Jewellery </a>
+                                <a href="#"> Precious Jewellery</a>
+                                <a href="#">Coins and Bars</a>
+
+
+                            </div>
+                        </div>
+                        <div class="Lingerie">
+                            <strong>Accessories</strong>
+                            <strong>Men's Accessories</strong>
+                            <div class="text-secondary  ms-3">
+                                <a href="#">Backpacks</a>
+                                <a href="#"> Wallets</a>
+                                <a href="#"> Belts</a>
+                                <a href="#">Sunglasses</a>
+                                <a href="#">Luggage & Travel</a>
+                                <a href="#">Frames</a>
+                                <a href="#"> Jewellery</a>
+
+
+                            </div>
+                        </div>
+                        <div class="Footware">
+                            <strong><a href="#" class="text-dark">Men's Watches</a></strong>
+                            <a href="#">Fastrack</a>
+                            <a href="#">Fossil</a>
+                            <a href="#">Casio</a>
+                            <a href="#">Titan</a>
+                            <a href="#">Sonata</a>
+                        </div>
+                        <div class="beauty">
+                            <strong class="text-dark">Women's Accessories</strong>
+                            <a href="#"> Handbags</a>
+                            <a href="#"> Shoulder Bags</a>
+                            <a href="#"> Totes</a>
+                            <a href="#"> Sling bags</a>
+                            <a href="#">Clutches</a>
+                            <a href="#"> Wallets & Belts</a>
+                            <a href="#"> Watches</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="categoryNavF" onmousemove="DforA()" onmouseleave="ForA()">Footware
+                    <div class="ForAll" style="top: 150px;" hidden>
+                        <div class="Footware">
+
+                            <strong class="d-block">Women's Footwear</strong>
+                            <div class="text-secondary  ms-3">
+                                <a href="#">flat</a>
+                                <a href="#">Heels</a>
+                                <a href="#">Wedges</a>
+                                <strong> <a href="#" class="text-dark ">Shoes</a></strong>
+                                <a href="#">Sport Shoes</a>
+                                <a href="#">Casual shoes</a>
+                                <a href="#">Boots</a>
+
+                            </div>
+                        </div>
+                        <div class="Lingerie">
+                            <strong class="d-block">Men's Footware</strong>
+                            <strong>Sandals</strong>
+
+                            <div class="text-secondary  ms-3">
+                                <a href="#">Sport Shoes</a>
+                                <a href="#">Formal Shoes</a>
+                                <a href="#">Casual Shoes</a>
+                                <strong>Sandals & Floaters</a></strong>
+                                <a href="#">Flip-Flop</a>
+                                <a href="#">Loafers</a>
+                                <a href="#">Boots</a>
+                                <a href="#">Running Shoes</a>
+                                <a href="#">Snickers</a>
+
+
+                            </div>
+                        </div>
+                        <div class="Footware">
+                            <strong class="d-block"> Kids' Footwear</strong>
+                            <strong> Boys' Footwear</strong>
+
+                            <div class="text-secondary  ms-3">
+                                <a href="#">Sandals</a>
+                                <a href="#"> Sport Shoes</a>
+                                <a href="#">Casual Shoes</a>
+                                <strong class="text-dark"> Girls' Footwear</a></strong>
+                                <a href="#"> Flats & Bellies</a>
+                                <a href="#"> Sport Shoess</a>
+                                <strong> <a href="#" class="text-dark">Infant Footwears</a></strong>
+                                <strong> <a href="#" class="text-dark"> Character Shoes</a></strong>
+                                <strong> <a href="#" class="text-dark">Kids' Watches</a></strong>
+                                <strong> <a href="#" class="text-dark"> Kids' Sunglasses</a></strong>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="categoryNavH" onmousemove="DForH()" onmouseleave="ForH()">Home & kitchen
+                    <div class="Forhome" style="top: 150px;" hidden>
+                        <div class="womenWear">
+                            <strong class="d-block">Small Appliances</strong>
+                            <div class="text-secondary  ms-3">
+
+                                <a href="#">Air Conditioners & Coolers</a>
+                                <a href="#">Fans</a>
+                                <a href="#">Freezers</a>
+                                <a href="#">Washers & Dryers</a>
+                                <a href="#">Refrigerators</a>
+                                <a href="#">Cookers & Ovens</a>
+                                <a href="#">Water Dispensers</a>
+                                <a href="#">Vacuum Cleaners</a>
+
+
+                            </div>
+                        </div>
+                        <div class="Lingerie">
+
+                            <strong><a href="#" class="text-dark">Large Appliances</a></strong>
+                            <div class="text-secondary ms-3">
+                                <a href="#">Blenders, Juicers & Mixers</a>
+                                <a href="#">Hot Plates & Burners</a>
+                                <a href="#">Irons & Steamers</a>
+                                <a href="#">Processors & Mincers</a>
+                                <a href="#">Toasters & Sandwich Makers</a>
+                                <a href="#">Deep Fryers & Rice Cookers</a>
+                                <a href="#">Electric Kettles</a>
+                                <a href="#">Microwaves</a>
+                                <a href="#">Yam Pounder</a>
+
+                            </div>
+                        </div>
+                        <div class="Footware">
+                            <strong class="d-block"> Home Furnishings</strong>
+                            <strong> Bed & Bathroom Furnishings</strong>
+
+                            <div class="text-secondary  ms-3">
+                                <a href="#">Curtains & Blinds</a>
+                                <a href="#"> Decor</a>
+                                <a href="#">CLight Fixtures</a>
+
+                                <a href="#"> Rugs & Carpets</a>
+                                <a href="#"> HOusekeeping & Pet Supplies</a>
+
+                            </div>
+                        </div>
+                        <div class="beauty">
+                            <strong>Kitchen & Dining</strong>
+
+                            <div class="text-secondary  ms-3">
+                                <a href="#">Cook and Bakeware</a>
+                                <a href="#"> Dining</a>
+                                <a href="#"> Kitchen Utensils</a>
+                                <a href="#"> Cooker Hoods & Ventilators</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="categoryNavE">Electronics
+                    <div class="Forchildren" hidden>
+                        <div class="womenWear">
+                            <strong class="d-block">Clothing</strong>
+                            <div class="text-secondary  ms-3">
+                                <strong><a href="#" class="text-dark">Boys' Clothing</a></strong>
+                                <a href="#">T-Shirt</a>
+                                <a href="#">Ethnic Wears </a>
+                                <a href="#">Shorts</a>
+                                <a href="#">Shirts</a>
+                                <a href="#">Innerwears</a>
+                                <a href="#">Boys' Sweatshirts</a>
+                                <strong><a href="#" class="text-dark">Girls' Clothing</a></strong>
+                                <a href="#">Dresses & Skirts</a>
+                                <a href="#">T-shirts & Top </a>
+                                <a href="#">Ethnic Wear</a>
+                                <a href="#">Innerwears</a>
+                                <a href="#">Girls' Sweatshirts</a>
+
+                            </div>
+                        </div>
+                        <div class="Lingerie">
+                            <strong>Toys</strong>
+                            <div class="text-secondary  ms-3">
+                                <a href="#">Remote Control Toys</a>
+                                <a href="#"> Educational Toys</a>
+                                <a href="#"> Soft Toys</a>
+                                <a href="#">Cars & Die-cast Vehicles</a>
+                                <a href="#">Outdoor Toys</a>
+                                <a href="#">Action Figures</a>
+                                <a href="#"> Board Games</a>
+                                <a href="#"> Musical Toys</a>
+                                <a href="#">Dolls & Doll Houses</a>
+                                <a href="#"> Puzzles</a>
+                                <a href="#"> S.T.E.M Toys</a>
+                                <a href="#"> Helicopter & Drones</a>
+                                <a href="#">Toy Guns</a>
+                                <a href="#">Party Supplies</a>
+
+                            </div>
+                        </div>
+                        <div class="Footware">
+                            <strong class="d-block"> Kids' Footwear</strong>
+                            <strong> Boys' Footwear</strong>
+
+                            <div class="text-secondary  ms-3">
+                                <a href="#">Sandals</a>
+                                <a href="#"> Sport Shoes</a>
+                                <a href="#">Casual Shoes</a>
+                                <strong class="text-dark"> Girls' Footwear</a></strong>
+                                <a href="#"> Flats & Bellies</a>
+                                <a href="#"> Sport Shoess</a>
+                                <strong> <a href="#" class="text-dark">Infant Footwears</a></strong>
+                                <strong> <a href="#" class="text-dark"> Character Shoes</a></strong>
+                                <strong> <a href="#" class="text-dark">Kids' Watches</a></strong>
+                                <strong> <a href="#" class="text-dark"> Kids' Sunglasses</a></strong>
+
+                            </div>
+                        </div>
+                        <div class="beauty">
+                            <strong>Babies Grooming & care</strong>
+
+                            <div class="text-secondary  ms-3">
+                                <a href="#"> Baby Bath, Hair & Skin Care</a>
+                                <a href="#"> Baby Grooming</a>
+                                <a href="#"> Baby Bathing Accessories</a>
+                                <a href="#"> Baby Gift Sets & Combo </a>
+                                <a href="#"> Baby Oral Care</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <form action="Search.html" class=" d-flex bg-white newForm mt-2 mb-2">
+                <button id="category">All categories <img width="30px" src="arrow.png" alt=""></button>
+
+                <input type="text" required class="" id="searcheng"
+                    placeholder="Search for product, brand & caregories...">
+                <button id="search" class="btn bg-white" onclick="SearCh(event)"><img width="25px" src="search-sam.png"
+                        alt=""></button>
+
+            </form>
+        </div>
+    </main>
+
+    <section class="d-flex m-4 p-2 ">
+        <main id="descriptions">
+            <div>
+
+                <div>
+                    <div class="title"> All categories </div>
+                    <div>
+                        <button class="btn form-control text-start hover-effect" type="button">Women's Fashion</button>
+                        <button class="btn form-control text-start hover-effect" type="button">Men's Fashion</button>
+                        <button class="btn form-control text-start hover-effect" type="button">Phones and
+                            Telecommunications
+                        </button>
+                        <button class="btn form-control text-start hover-effect" type="button">Consumer
+                            Electronics</button>
+                        <button class="btn form-control text-start hover-effect" type="button">Computers, Office &
+                            Security</button>
+
+                        <button class="btn form-control text-start hover-effect" type="button">Furniture</button>
+                        <button class="btn form-control text-start hover-effect" type="button">Jewelry &
+                            watches</button>
+                        <button class="btn form-control text-start hover-effect" type="button">Home Appliances</button>
+                        <button class="btn form-control text-start hover-effect" type="button">Bags and Shoes</button>
+                        <button class="btn form-control text-start hover-effect" type="button">Toy,Kids &
+                            babies</button>
+                        <button class="btn form-control text-start hover-effect" type="button">Bags & Shoes</button>
+                        <button class="btn form-control text-start hover-effect" type="button">Beauty, Health and
+                            Hair</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section id="padd" style="padding: 30px; padding-top: 0; min-width: 70%;">
+            <main id="topdeal">
+
+            </main>
+        </section>
+    </section>
+    <section style="padding: 30px; padding-top: 0;">
+        <div class="popular-header">
+            <span>Viewed Items </span>
+        </div>
+        <main class="popular flex-wrap">
+
+        </main>
+    </section>
+    <section
+    style="background-color:palevioletred; padding-top: 20px;margin-top: 10px;padding-left: 50px; padding-right: 50px; padding-bottom: 30px">
+    <main class="conclussion"
+        style="width: 100%; display: flex; justify-content: space-between; color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        <div >
+            <div class="fs-4 pb-3 fw-bold " onclick="D1()"><strong class="d-flex">Company <img id="im" width="30px" src="arrow.png" alt=""></strong></div>
+            <main id="accordion1">
+                <div class="pb-2">About us </div>
+                <div class="pb-2">Our Story</div>
+                <div class="pb-2">Careers </div>
+                <div class="pb-2">Privacy Policy</div>
+                <div class="pb-2">Terms & Conditions</div>
+            </main>
+        </div>
+        <div >
+            <div class="fs-4 pb-3 fw-bold "><strong class="d-flex" onclick="D2()">Products <img id="im" width="30px" src="arrow.png" alt=""></strong></div>
+            <main id="accordion2" >
+                <div class="pb-2">Fashionable Snickers for ladies</div>
+                <div class="pb-2">Kids Quality & Fashionable Snickers</div>
+                <div class="pb-2">Men's Elegant Wears </div>
+                <div class="pb-2">Home and Kitchen Utensils</div>
+                <div class="pb-2">Women's Wears and Fashion</div>
+                <div class="pb-2">Phones and Phone Accessories</div>
+                <div class="pb-2">Samsung Products</div>
+                <div class="pb-2">Computers and Accessories</div>
+            </main>
+        </div>
+        <div class="pb-2" >
+            <div class="fs-4 pb-3 fw-bold" onclick="D3()"><strong class="d-flex">Support <img id="im" width="30px" src="arrow.png" alt=""></strong></div>
+            <main id="accordion3">
+                <div class="pb-2">Contact Us</div>
+                <div class="pb-2">FAQs</div>
+                <div class="pb-2">Chat with Us </div>
+                <span class="bg-white p-2 rounded-2"> <img width="20px" src="flat-face.png" alt=""></span>
+                <span style="background-color: rgb(247,232,210);" class="p-2 rounded-2"> <img width="20px"
+                        src="linkedin-logo-new.png" alt=""></span>
+                <span style="background-color: palegreen;" class="rounded-2 p-2"><img width="20px"
+                        src="inta-flat.png" alt=""></span>
+                <span class="bg-white p-2 rounded-2"><img width="30px" src="email-img.png" alt=""></span>
+            </main>
+        </div>
+        <div >
+            <div class="fs-4 pb-2 fw-bold " onclick="D4()"><strong class="d-flex">Want Special Offers <img id="im" width="30px" src="arrow.png" alt=""></strong></div>
+            <form action="" id="accordion4">
+                <div  style="display: flex; flex-direction: column;">
+                    <input type="text" class="redu" placeholder="Please enter your name"
+                        style="padding: 10px; width: 350px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; border: none; outline: none;">
+                    <input type="text" class="mt-2 redu" placeholder="Please enter your Email Address"
+                        style="padding: 10px; width: 350px; border: none; outline: none;">
+                    <button class="mt-2 redu"
+                        style="padding: 10px; width: 350px; border: none; outline: none; background-color: palegreen;color: white;">Subscribe</button>
+                </div>
+            </form>
+            <div class=" mt-2 d-flex gap-2">
+                <form action="">
+                    <button
+                        style="background-color: transparent; border: 2px solid white; color: white; padding: 7px;">Sell
+                        your Products</button>
+                </form>
+                <form action="login.html">
+                    <button
+                        style="background-color: transparent; border: 2px solid white; color: white; padding: 7px;">Sign
+                        In</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <hr>
+    <div style="font-size: 13px; color: white; text-align: center;">Copyright @ 2022 May&Make Nigeria Limited. All
+        rights reserved </div>
+</section>
+</body>
+<script src="Search.js"></script>
+<script>
+  let getCuser = JSON.parse(localStorage.getItem("currentuser"))
+    document.getElementById("Username").innerHTML = getCuser.first
+
+</script>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <title>SignUp</title>
+    <style>
+        #FormContainer {
+            padding: 30px;
+            /* background: linear-gradient(60deg, yellow, orangered); */
+            background-color: rgba(29, 29, 31, 0.8);
+            box-shadow: 2px 2px 5px white;
+            /* margin-top: 100px; */
+        }
+
+        #mainContainer {
+            width: 400px;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .Name {
+            font-size: 30px;
+            color: palevioletred;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .nav2 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            color: palevioletred;
+
+
+        }
+
+        .Ads {
+            margin-top: -3px;
+            font-size: 13px;
+            font-family: "Sofia";
+            text-align: center;
+
+        }
+
+        body {
+            background-image: url(kx-sam.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        a {
+            padding-right: 20px;
+            text-decoration: none;
+            color: yellow;
+        }
+
+        a:hover {
+            color: turquoise;
+        }
+
+        .hide {
+            font-style: italic;
+            color: red;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .validation{
+            background-color: rgba(228, 138, 138, 0.5);
+            color: red;
+            font-style: italic;
+        }
+
+        @media(max-width:750px) {
+            .nav2 {
+                font-size: 25px;
+            }
+
+            a {
+                font-size: 15px;
+                padding-right: 17px;
+            }
+
+            #mainContainer {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media(max-width:650px) {
+            .nav2 {
+                font-size: 20px;
+            }
+
+            a {
+                font-size: 14px;
+                padding-right: 14px;
+            }
+        }
+
+        @media(max-width:580px) {
+            .nav2 {
+                font-size: 17px;
+            }
+
+            a {
+                font-size: 13px;
+                padding-right: 13px;
+            }
+        }
+
+        @media(max-width:560px) {
+            .rem {
+                display: none;
+            }
+        }
+
+        @media(max-width:520px) {
+            #mainContainer {
+                width: 400px;
+            }
+        }
+
+        @media(max-width:400px) {
+            #mainContainer {
+                width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <Nav>
+        <main
+            style="display: flex; justify-content: space-between;align-items: center; padding-top: 5px;padding-left: 20px;padding-right: 20px; ">
+            <div class="nav2">
+                🎀 May&Make
+                <div class="Ads">shop online without stress</div>
+            </div>
+            <div>
+                <a href="landing-page.html">Home</a>
+                <a href="#">About Us</a>
+                <a href="#" class="rem">Our Story</a>
+                <a href="#" class="rem">Terms & Policy</a>
+                <form action="login.html" class="d-inline">
+                    <button class="btn pt-1 pb-1" style="background-color: turquoise;">Log In</button>
+                </form>
+
+            </div>
+        </main>
+    </Nav>
+
+    <section id="mainContainer">
+
+        <main id="FormContainer">
+            <form action="" id="form" target="blank">
+                <p class="validation p-2 rounded-1" hidden>Please provide the Neccessary Informaion</p>
+                <div>
+
+                    <input type="text" name="" id="FirstName" placeholder="Firstname" class="form-control p-2 "
+                        required>
+
+                    <input type="text" name="" id="LastName" placeholder="Lastname" class="form-control p-2  mt-3"
+                        required>
+
+                </div>
+                <input type="email" id="Email" placeholder="Email Address" title=" " class="form-control p-2 mt-3"
+                    required>
+                <p id="validateEmail"></p>
+                <input type="text" id="PhoneNumber" placeholder="Phone Number" class="form-control p-2 mt-3" required>
+
+              
+                    <input type="password" id="password" placeholder="password"  class="form-control p-2 mt-3" required>
+                   
+              
+                <!-- <div id="showp" class="text-white">bjk</div> -->
+
+                <input type="password" id="ConfirmPassword" placeholder="Confirm password" class="form-control p-2 mt-3"
+                    required>
+                <p id="validatepassword"></p>
+
+                <div class="mt-3 text-white">
+                    <input type="checkbox"> Remember me
+                </div>
+                <div class="mt-3">
+                    <button onclick="Validate(event)" class="btn btn-dark form-control p-1 fs-5 rounded-pill border-0 "
+                        id="submit" style="background-color: palegreen;">Create Account</button>
+
+                </div>
+
+            </form>
+            <div class="text-center text-white"> Already have an account? <a href="login.html" class="fs-5">Log In </a>
+            </div>
+
+        </main>
+    </section>
+</body>
+<script>
+    let emailAddr = document.getElementById("Email")
+    let password = document.getElementById("password")
+    let ConfirmPassword = document.getElementById("ConfirmPassword")
+    let FirstName = document.getElementById("FirstName")
+    let LastName = document.getElementById("LastName")
+    let PhoneNumber = document.getElementById("PhoneNumber")
+    let validate = document.getElementById("validateEmail")
+    let validatepassword = document.getElementById("validatepassword")
+    let validation = document.querySelector(".validation")
+
+
+    let CustomerInfo = []
+    let ConfirmEmail;
+    let getinfo = JSON.parse(localStorage.getItem("info"))
+    if (getinfo != null) {
+        CustomerInfo = getinfo
+
+    }
+
+    function Validate(ev) {
+        ev.preventDefault()
+       
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailAddr.value)) {
+            ConfirmEmail = emailAddr.value
+        } else {
+            validate.classList.add("hide")
+            validate.innerHTML = "Invalid Email Address"
+            alert("invalid")
+        }
+
+        
+        if (ConfirmPassword.value != password.value) {
+            validatepassword.classList.add("hide")
+            validatepassword.innerHTML = "password not match"
+        }
+        else {
+            
+            if (FirstName.value == "") {
+            validation.hidden = false
+            } else if (LastName.value == "") {
+                validation.hidden = false
+            }else if (emailAddr.value == "") {
+                validation.hidden = false
+            }else if (password.value == "") {
+                validation.hidden = false
+            }else if (PhoneNumber.value == "") {
+                validation.hidden = false
+            }else if (ConfirmPassword.value == "") {
+                validation.hidden = false
+            }else{
+                console.log("not working yet")
+            }
+
+            let userdata = getinfo.find(e => {
+                return e.email === emailAddr.value
+            })
+            console.log(userdata);
+            if (userdata) {
+                console.log("existed")
+                alert("already existing account!")
+                // return
+            } else {
+                CustomerInfo.push({
+                    first: FirstName.value,
+                    second: LastName.value,
+                    email: ConfirmEmail,
+                    number: PhoneNumber.value,
+                    password: password.value,
+                    ConfirmPassword: ConfirmPassword.value
+                })
+                localStorage.setItem("info", JSON.stringify(CustomerInfo))
+                alert("registration successful")
+                window.location.href = "login.html"
+            }
+           
+        }
+        
+        
+    }
+    // let showp = document.getElementById("showp")
+    // function displayps() {
+    //     let pass = ""
+    //     let passs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*?abcdefghijklmnopqrstuvwxyz"
+       
+    //     for (let index = 0; index < 14; index++) {
+
+    //         let randomIndex = Math.floor(Math.random() * passs.length)
+    //         pass += passs.substring(randomIndex, randomIndex + 1);
+    //     }
+    //     showp.innerHTML = pass
+    //         console.log(showp.innerHTML)
+
+    // }
+    // displayps()
+    // let toggler = true
+    // function change(ev) {
+    //     if (toggler == true) {
+    //         ev.target.src = "show.png"
+    //         password.type = "text"
+    //         toggler = false
+    //     } else {
+    //         ev.target.src = "hide.png"
+    //         password.type = "password"
+    //         toggler = true;
+    //     }
+    // }
+</script>
+
+</html>
