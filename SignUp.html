@@ -215,7 +215,9 @@
     let validation = document.querySelector(".validation")
 
 
-    let CustomerInfo = []
+    let CustomerInfo = [{email:"ismailbarakat05@gmail.com",first:"Barakat", second:"Ismail", number:"09077778241",password:"000",ConfirmPassword:"000"}]
+    localStorage.setItem("info", JSON.stringify(CustomerInfo))
+    
     let ConfirmEmail;
     let getinfo = JSON.parse(localStorage.getItem("info"))
     if (getinfo != null) {
