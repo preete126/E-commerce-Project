@@ -171,9 +171,6 @@
 <script src="https://js.paystack.co/v1/inline.js"></script> 
 
 <script>
-    let getindex = JSON.parse(localStorage.getItem("MoveIndex"))
-    let getadd = JSON.parse(localStorage.getItem("addcart"))
-    let getcoll = JSON.parse(localStorage.getItem("Cartcoll"))
     let Fname = document.getElementById("input1")
     let Lname = document.getElementById("input2")
     let namearr = []
@@ -196,13 +193,6 @@ function payWithPaystack(e) {
     callback: function(response){
       let message = 'Payment complete! Reference: ' + response.reference;
       alert(message);
-      getcoll = []
-      getadd = []
-      getindex = []
-      localStorage.setItem("Cartcoll", JSON.stringify(getcoll))
-      localStorage.setItem("addcart", JSON.stringify(getadd))
-      localStorage.setItem("MoveIndex", JSON.stringify(getindex))
-
       window.location.href = "Receipt.html"
 
     }

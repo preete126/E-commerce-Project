@@ -110,6 +110,7 @@
     let code = document.getElementById('code')
     let refno = Math.floor(Math.random()*100000 +5)
     let getcoll = JSON.parse(localStorage.getItem("Cartcoll"))
+    let getindex = JSON.parse(localStorage.getItem("MoveIndex"))
     let date = document.getElementById("date")
     document.getElementById("refno").innerHTML = refno
     console.log(getcoll);
@@ -166,7 +167,12 @@ updatedate()
  }
  function exit(params) {
      window.location.href = "Home-page.html"
-     
+     getcoll = []
+      getadd = []
+      getindex = []
+      localStorage.setItem("Cartcoll", JSON.stringify(getcoll))
+      localStorage.setItem("addcart", JSON.stringify(qty))
+      localStorage.setItem("MoveIndex", JSON.stringify(getindex))
  }
 </script>
 </html>
