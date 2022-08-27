@@ -167,32 +167,13 @@
             </form>
         </main>
     </section>
-    <!-- <form id="paymentForm" class="text-dark">
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email-address" required />
-        </div>
-        <div class="form-group">
-          <label for="amount">Amount</label>
-          <input type="tel" id="amount" required />
-        </div>
-        <div class="form-group">
-          <label for="first-name">First Name</label>
-          <input type="text" id="first-name" />
-        </div>
-        <div class="form-group">
-          <label for="last-name">Last Name</label>
-          <input type="text" id="last-name" />
-        </div>
-        <div class="form-submit">
-          <button type="submit" onclick="payWithPaystack()"> Pay </button>
-        </div>
-      </form>
-       -->
 </body>
 <script src="https://js.paystack.co/v1/inline.js"></script> 
 
 <script>
+    let getindex = JSON.parse(localStorage.getItem("MoveIndex"))
+    let getadd = JSON.parse(localStorage.getItem("addcart"))
+    let getcoll = JSON.parse(localStorage.getItem("Cartcoll"))
     let Fname = document.getElementById("input1")
     let Lname = document.getElementById("input2")
     let namearr = []
@@ -215,7 +196,15 @@ function payWithPaystack(e) {
     callback: function(response){
       let message = 'Payment complete! Reference: ' + response.reference;
       alert(message);
+      getcoll = []
+      getadd = []
+      getindex = []
+      localStorage.setItem("Cartcoll", JSON.stringify(getcoll))
+      localStorage.setItem("addcart", JSON.stringify(getadd))
+      localStorage.setItem("MoveIndex", JSON.stringify(getindex))
+
       window.location.href = "Receipt.html"
+
     }
     
   });
