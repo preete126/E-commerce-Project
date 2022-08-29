@@ -513,6 +513,24 @@ a:hover {
     .nav2{
         font-size: 20px !important;
     }
+    #descriptions{
+        padding-top: 30px;
+       margin-left: -2px !important;
+        width: 350px !important;
+        height: 59vh;
+    }
+    .loop2{
+        width: 160px;
+    }
+    #increase{
+        height: 120px;
+    }
+    section{
+        padding-left: 15px !important;
+    }
+    #title{
+        font-size: 11px !important;
+    }
 }
 @media(max-width:600px){
     #category{

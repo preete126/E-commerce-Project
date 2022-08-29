@@ -652,6 +652,39 @@ width: 50px; */
     .nav2{
         font-size: 20px !important;
     }
+    .loop1{
+        width: 170px;
+    }
+    .loop2{
+        width: 170px;
+        /* height: 120px; */
+    }
+    #increase{
+        height: 120px;
+    }
+    .loop3{
+        width: 180px;
+    }
+    .loop4 #increase{
+        height: 170px;
+    }
+    #title{
+        font-size: 11px !important;
+    }
+    
+    /* .loop5 #increase{
+        height: 110px;
+    } */
+    .loop5{
+        width: 170px;
+    }
+    #sideDisplay{
+        padding-left:10px !important;
+        padding-right:10px !important;
+    }
+    section{
+        padding: 15px !important;
+    }
 }
 @media(max-width:600px){
     #category{

@@ -478,7 +478,18 @@ a:hover {
         font-size: 20px !important;
     }
     #descriptions{
-        width: 300px;
+        padding-top: 30px;
+        width: 350px;
+        height: 59vh;
+    }
+    .loop2{
+        width: 150px;
+    }
+    #increase{
+        height: 120px;
+    }
+    #title{
+        font-size: 11px !important;
     }
 }
 @media(max-width:600px){
