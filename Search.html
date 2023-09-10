@@ -24,19 +24,17 @@
             border-bottom-right-radius: 7px;
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap ;
+            flex-wrap: wrap;
 
         }
-        @media(max-width:1030px){
-            #descriptions{
-                display: none;
-            }
-            #padd{
-                padding: 10px !important;
-            }
+
+        @media(max-width:320px) {
+           #topdeal{
+               padding: 10px;
+           }
         }
     </style>
-    
+
 </head>
 
 <body>
@@ -122,7 +120,7 @@
                         <p class="text-center">08177778241,08140482507</p>
                     </div>
                 </div>
-                
+
                 <a href="Cart.html">
                     <div class="d-flex">
 
@@ -171,7 +169,7 @@
 
         <div id="itemNav">
 
-            <button class="btn text-white fs-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+            <button class="btn text-white fs-5 canvas_btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
                 <img width="40px" src="side-bar.png" alt="">
             </button>
             <div class="d-flex gap-5 align-items-center text-white Dcategory">
@@ -642,7 +640,7 @@
         </div>
     </main>
 
-    <section class="d-flex m-4 p-2 ">
+    <section class="d-flex gap-5 " style="padding: 30px;">
         <main id="descriptions">
             <div>
 
@@ -673,91 +671,94 @@
                 </div>
             </div>
         </main>
-        <section id="padd" style="padding: 30px; padding-top: 0; min-width: 70%;">
-            <main id="topdeal">
 
-            </main>
-        </section>
+        <main id="topdeal">
+
+        </main>
+
     </section>
     <section style="padding: 30px; padding-top: 0;">
         <div class="popular-header">
             <span>Viewed Items </span>
         </div>
-        <main class="popular flex-wrap">
+        <main class="popular ">
 
         </main>
     </section>
-    <section
-    style="background-color:palevioletred; padding-top: 20px;margin-top: 10px;padding-left: 50px; padding-right: 50px; padding-bottom: 30px">
-    <main class="conclussion"
-        style="width: 100%; display: flex; justify-content: space-between; color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-        <div >
-            <div class="fs-4 pb-3 fw-bold " onclick="D1()"><strong class="d-flex">Company <img id="im" width="30px" src="arrow.png" alt=""></strong></div>
-            <main id="accordion1">
-                <div class="pb-2">About us </div>
-                <div class="pb-2">Our Story</div>
-                <div class="pb-2">Careers </div>
-                <div class="pb-2">Privacy Policy</div>
-                <div class="pb-2">Terms & Conditions</div>
-            </main>
-        </div>
-        <div >
-            <div class="fs-4 pb-3 fw-bold "><strong class="d-flex" onclick="D2()">Products <img id="im" width="30px" src="arrow.png" alt=""></strong></div>
-            <main id="accordion2" >
-                <div class="pb-2">Fashionable Snickers for ladies</div>
-                <div class="pb-2">Kids Quality & Fashionable Snickers</div>
-                <div class="pb-2">Men's Elegant Wears </div>
-                <div class="pb-2">Home and Kitchen Utensils</div>
-                <div class="pb-2">Women's Wears and Fashion</div>
-                <div class="pb-2">Phones and Phone Accessories</div>
-                <div class="pb-2">Samsung Products</div>
-                <div class="pb-2">Computers and Accessories</div>
-            </main>
-        </div>
-        <div class="pb-2" >
-            <div class="fs-4 pb-3 fw-bold" onclick="D3()"><strong class="d-flex">Support <img id="im" width="30px" src="arrow.png" alt=""></strong></div>
-            <main id="accordion3">
-                <div class="pb-2">Contact Us</div>
-                <div class="pb-2">FAQs</div>
-                <div class="pb-2">Chat with Us </div>
-                <span class="bg-white p-2 rounded-2"> <img width="20px" src="flat-face.png" alt=""></span>
-                <span style="background-color: rgb(247,232,210);" class="p-2 rounded-2"> <img width="20px"
-                        src="linkedin-logo-new.png" alt=""></span>
-                <span style="background-color: palegreen;" class="rounded-2 p-2"><img width="20px"
-                        src="inta-flat.png" alt=""></span>
-                <span class="bg-white p-2 rounded-2"><img width="30px" src="email-img.png" alt=""></span>
-            </main>
-        </div>
-        <div >
-            <div class="fs-4 pb-2 fw-bold " onclick="D4()"><strong class="d-flex">Want Special Offers <img id="im" width="30px" src="arrow.png" alt=""></strong></div>
-            <form action="" id="accordion4">
-                <div  style="display: flex; flex-direction: column;">
-                    <input type="text" class="redu" placeholder="Please enter your name"
-                        style="padding: 10px; width: 350px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; border: none; outline: none;">
-                    <input type="text" class="mt-2 redu" placeholder="Please enter your Email Address"
-                        style="padding: 10px; width: 350px; border: none; outline: none;">
-                    <button class="mt-2 redu"
-                        style="padding: 10px; width: 350px; border: none; outline: none; background-color: palegreen;color: white;">Subscribe</button>
-                </div>
-            </form>
-            <div class=" mt-2 d-flex gap-2">
-                <form action="">
-                    <button
-                        style="background-color: transparent; border: 2px solid white; color: white; padding: 7px;">Sell
-                        your Products</button>
-                </form>
-                <form action="login.html">
-                    <button
-                        style="background-color: transparent; border: 2px solid white; color: white; padding: 7px;">Sign
-                        In</button>
-                </form>
+    <section style="background-color:palevioletred; padding-top: 20px;margin-top: 10px;padding: 30px">
+        <main class="conclussion"
+            style="width: 100%; display: flex; justify-content: space-between; color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            <div>
+                <div class="fs-4 pb-3 fw-bold " onclick="D1()"><strong class="d-flex">Company <img id="im" width="30px"
+                            src="arrow.png" alt=""></strong></div>
+                <main id="accordion1">
+                    <div class="pb-2">About us </div>
+                    <div class="pb-2">Our Story</div>
+                    <div class="pb-2">Careers </div>
+                    <div class="pb-2">Privacy Policy</div>
+                    <div class="pb-2">Terms & Conditions</div>
+                </main>
             </div>
-        </div>
-    </main>
-    <hr>
-    <div style="font-size: 13px; color: white; text-align: center;">Copyright @ 2022 May&Make Nigeria Limited. All
-        rights reserved </div>
-</section>
+            <div>
+                <div class="fs-4 pb-3 fw-bold "><strong class="d-flex" onclick="D2()">Products <img id="im" width="30px"
+                            src="arrow.png" alt=""></strong></div>
+                <main id="accordion2">
+                    <div class="pb-2">Fashionable Snickers for ladies</div>
+                    <div class="pb-2">Kids Quality & Fashionable Snickers</div>
+                    <div class="pb-2">Men's Elegant Wears </div>
+                    <div class="pb-2">Home and Kitchen Utensils</div>
+                    <div class="pb-2">Women's Wears and Fashion</div>
+                    <div class="pb-2">Phones and Phone Accessories</div>
+                    <div class="pb-2">Samsung Products</div>
+                    <div class="pb-2">Computers and Accessories</div>
+                </main>
+            </div>
+            <div class="pb-2">
+                <div class="fs-4 pb-3 fw-bold" onclick="D3()"><strong class="d-flex">Support <img id="im" width="30px"
+                            src="arrow.png" alt=""></strong></div>
+                <main id="accordion3">
+                    <div class="pb-2">Contact Us</div>
+                    <div class="pb-2">FAQs</div>
+                    <div class="pb-2">Chat with Us </div>
+                    <span class="bg-white p-2 rounded-2"> <img width="20px" src="flat-face.png" alt=""></span>
+                    <span style="background-color: rgb(247,232,210);" class="p-2 rounded-2"> <img width="20px"
+                            src="linkedin-logo-new.png" alt=""></span>
+                    <span style="background-color: palegreen;" class="rounded-2 p-2"><img width="20px"
+                            src="inta-flat.png" alt=""></span>
+                    <span class="bg-white p-2 rounded-2"><img width="30px" src="email-img.png" alt=""></span>
+                </main>
+            </div>
+            <div>
+                <div class="fs-4 pb-2 fw-bold " onclick="D4()"><strong class="d-flex">Want Special Offers <img id="im"
+                            width="30px" src="arrow.png" alt=""></strong></div>
+                <form action="" id="accordion4">
+                    <div style="display: flex; flex-direction: column;">
+                        <input type="text" class="redu" placeholder="Please enter your name"
+                            style="padding: 10px; width: 350px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; border: none; outline: none;">
+                        <input type="text" class="mt-2 redu" placeholder="Please enter your Email Address"
+                            style="padding: 10px; width: 350px; border: none; outline: none;">
+                        <button class="mt-2 redu"
+                            style="padding: 10px; width: 350px; border: none; outline: none; background-color: palegreen;color: white;">Subscribe</button>
+                    </div>
+                </form>
+                <div class=" mt-2 d-flex gap-2">
+                    <form action="">
+                        <button
+                            style="background-color: transparent; border: 2px solid white; color: white; padding: 7px;">Sell
+                            your Products</button>
+                    </form>
+                    <form action="login.html">
+                        <button
+                            style="background-color: transparent; border: 2px solid white; color: white; padding: 7px;">Sign
+                            In</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <hr>
+        <div style="font-size: 13px; color: white; text-align: center;">Copyright @ 2022 May&Make Nigeria Limited. All
+            rights reserved </div>
+    </section>
 </body>
 <script src="Search.js"></script>
 

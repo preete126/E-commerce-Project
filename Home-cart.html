@@ -30,7 +30,7 @@
                 </form>
                 <div class="">
                     <div onmousemove="Account()" onmouseleave="remP()">
-                        <button class="Account" style="position: relative; font-size: 17px; font-weight: 600;"><img width="20px" height="20px" style="margin-top: -10px;" src="me-sam.png" alt=""> Hi <span id="Username"> Mubarokah</span> <img width="30px" src="arrow.png"
+                        <button class="Account home_acc" style="position: relative; font-size: 17px; font-weight: 600;"><img width="20px" height="20px" style="margin-top: -10px;" src="me-sam.png" alt=""> Hi <span id="Username"> Mubarokah</span> <img width="30px" src="arrow.png"
                                 alt=""> </button>
                         <div class="Profile " style="top: 55px;" hidden>
                             <div class="ps-2 ">
@@ -107,7 +107,7 @@
 
         <div id="itemNav">
            
-                <button class="btn text-white fs-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                <button class="btn text-white fs-5 canvas_btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
                     <img width="40px" src="side-bar.png" alt="">
                </button>
                <div class="d-flex gap-5 align-items-center text-white Dcategory">
@@ -647,7 +647,7 @@
         </main>
     </section>
     <section
-    style="background-color:palevioletred; padding-top: 20px;margin-top: 10px;padding-left: 50px; padding-right: 50px; padding-bottom: 30px">
+    style="background-color:palevioletred; padding-top: 20px;margin-top: 10px;padding: 30px">
     <main class="conclussion"
         style="width: 100%; display: flex; justify-content: space-between; color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
         <div >
@@ -705,10 +705,10 @@
                         style="background-color: transparent; border: 2px solid white; color: white; padding: 7px;">Sell
                         your Products</button>
                 </form>
-                <form action="login.html">
+                <form action="Index.html" target="blank">
                     <button
-                        style="background-color: transparent; border: 2px solid white; color: white; padding: 7px;">Sign
-                        In</button>
+                        style="background-color: transparent; border: 2px solid white; color: white; padding: 7px;">log out
+                        </button>
                 </form>
             </div>
         </div>
@@ -721,7 +721,7 @@
 <script src="Cart.js"></script>
 <script>
     let getCuser = JSON.parse(localStorage.getItem("currentuser"))
-    document.getElementById("Username").innerHTML = getCuser.first
+    document.getElementById("Username").innerHTML = getCuser?.first
 
 </script>
 </html>

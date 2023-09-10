@@ -159,7 +159,7 @@
     <main id="items">
 
         <div id="itemNav">
-            <button class="btn text-white fs-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+            <button class="btn text-white fs-5 canvas_btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
                 <img width="40px" src="side-bar.png" alt="">
             </button>
             <div class="d-flex gap-5 align-items-center text-white Dcategory">
@@ -660,19 +660,13 @@
             <div id="demo" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img width="100%" class="image rounded-3" src="upgrade.jpg" alt="Los Angeles"
-                            class="d-block w-100">
+                        <img width="100%" height="100%"  class=" rounded-3 " src="warranty.jpg" alt="Los Angeles"
+                            >
                     </div>
                     <div class="carousel-item ">
-                        <img width="100%" class="image rounded-3" src="cosmetics.jpg" alt="">
+                        <img width="100%" height="100%"  class=" rounded-3" src="pay.jpg" alt="cosmetics">
                     </div>
-                    <div class="carousel-item">
-                        <img width="100%" class="image rounded-3" src="lappy.jpg" alt="Chicago" class="d-block w-100">
-                    </div>
-                    <div class="carousel-item">
-                        <img width="100%" class="image rounded-3" src="warranty.jpg" alt="New York"
-                            class="d-block w-100">
-                    </div>
+                  
                 </div>
 
                 <!-- Left and right controls/icons -->
@@ -715,13 +709,13 @@
         <div class="popular-header text-dark fs-5" style="background-color: rgb(226,245,255);">
             <span>Top Selling Items</span>
         </div>
-        <main style="padding: 20px;background-color: rgb(240,241,245);">
+        <main class="scroll" style="padding: 20px;background-color: rgb(240,241,245);">
             <main id="topsell">
             </main>
         </main>
     </section>
 
-    <section style=" margin: 30px;">
+    <section style=" padding:30px;">
         <div class="popular-header">
             <span>
                 <h3 class="d-inline">Latest deal |</h3> Samsung
@@ -739,55 +733,63 @@
                 <div><img width="100%" height="100px" class="rounded-3 " src="samsung.webp" alt=""></div>
 
             </div>
-            <main>
                 <main class=" wrapItem">
-                    <div class=" text-center pt-4 flo">
-                        <img width="53%" src="spring-flower.webp" alt="">
-                        <p class=" fw-b">Save an amazing $100</p>
+                    <div class="mb-3 text-center flo">
+                        <div ><img  src="spring-flower.webp" alt=""></div>
+                        <p class=" fw-b pt-2" style="height: 60px;">Save an amazing $100</p>
                         <p class="z text-secondary">when you buy Galaxy Z fold3 or Galaxy Z flip3</p>
-                        <button class="btn btn-dark rounded-pill pt-1 d">Buy now</button>
+                       <div>
+                           <button class="btn btn-dark rounded-pill pt-1 d">Buy now</button>
+                       </div>
                     </div>
                     <div class=" text-center  flow">
-                        <img width="53%" src="spring-hill.webp" alt="">
-                        <p class=" fw-b">Amazing prices on QLED TVs from $449</p>
+                        <div ><img  src="spring-hill.webp" alt=""></div>
+                        <p class=" fw-b pt-2" style="height: 60px;">Amazing prices on QLED TVs from $449</p>
                         <p class="z text-secondary  "> while stocks last</p>
-                        <button class="btn btn-dark rounded-pill pt-1 d">Buy now</button>
+                       <div>
+                           <button class="btn btn-dark rounded-pill pt-1 d">Buy now</button>
+                       </div>
 
                     </div>
-                    <div class=" text-center pt-4 flo">
-                        <img width="53%" src="spring-cam.webp" alt="">
-                        <p class="fw-b">Save 20% when you buy 3 selected home appliances </p>
+                    <div class="mb-3 text-center  flo">
+                        <div ><img  src="spring-cam.webp" alt=""></div>
+                        <p class="fw-b pt-2" style="height: 60px;">Save 20% when you buy 3 selected home appliances </p>
                         <p class="z text-secondary  "> or save 15% when you buy two</p>
-                        <button class="btn btn-dark rounded-pill pt-1 d">Buy now</button>
+                       <div>
+                           <button class="btn btn-dark rounded-pill pt-1 d">Buy now</button>
+                       </div>
 
 
                     </div>
-                    <div class=" text-center pt-5 flow">
-                        <img width="53%" src="spring-lap.webp" alt="">
-                        <p class="fw-b">Claim free gifts worth $300</p>
+                    <div class=" text-center flow">
+                        <div ><img  src="spring-lap.webp" alt=""></div>
+                        <p class="fw-b pt-2" style="height: 60px;">Claim free gifts worth $300</p>
                         <p class="z text-secondary  "> When you buy Galaxy book2 series</p>
-                        <button class="btn btn-dark rounded-pill pt-1 d">Buy now</button>
+                       <div>
+                           <button class="btn btn-dark rounded-pill pt-1 d">Buy now</button>
+                       </div>
 
                     </div>
                 </main>
 
-            </main>
         </div>
     </section>
-    <main class="offer">
-        <img width="49%" height="250px" class="rounded-3" id="img" src="nww-lappy.jpg" alt="">
-        <img width="49%" height="250px" class="rounded-3" id="img" src="alcohol.jfif" alt="">
-    </main>
+    <section style="padding: 30px;">
+        <main class="offer">
+            <div> <img  class="rounded-3" width="100%" height="100%" src="nww-lappy.jpg" alt=""></div>
+            <div> <img  class="rounded-3" width="100%" height="100%" src="alcohol.jfif" alt=""></div>
+         </main>
+    </section>
 
-    <section style="padding: 30px; padding-top: 0;">
+    <section  style="padding: 30px; padding-top: 0;">
         <div class="popular-header text-dark " style="background-color: rgb(226,245,255);">
             <span>
                 <h3 class="d-inline">Fashion Week |</h3> Bags Collection
             </span>
         </div>
-        <main style="padding: 20px;background-color: rgb(240,241,245);">
+        <main class="scroll" style="padding: 20px;background-color: rgb(240,241,245);">
             <main id="bags">
-
+                
             </main>
         </main>
     </section>
@@ -821,7 +823,7 @@
         </main>
     </section>
     <section
-        style="background-color:palevioletred; padding-top: 20px;margin-top: 10px;padding-left: 50px; padding-right: 50px; padding-bottom: 30px">
+        style="background-color:palevioletred; padding-top: 20px;margin-top: 10px;padding: 30px;">
         <main class="conclussion"
         style="width: 100%; display: flex; justify-content: space-between; color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
         <div >

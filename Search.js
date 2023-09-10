@@ -286,7 +286,7 @@ window.addEventListener('load', ()=>{
     getItem.map((value, index) => {
         document.querySelector('.popular').innerHTML +=
         `
-        <a href="ToaddCart.html" id= "incre" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue; " onclick = "moveM(${index})" >
+        <a href="view-item.html" id= "incre" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue; " onclick = "moveM(${index})" >
             <div class="loop2" ">
             <img width="100%" height="200px" id="increase" src="${value.image}" alt="">
             <div id="title" style="height:60px; font-weight:bold; font-size:14px; ">${value.title}</div>

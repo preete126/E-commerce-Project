@@ -14,14 +14,13 @@
     <title>Log In</title>
     <style>
          #form{
-            border-top: 2px solid aqua;
-            border-right: 2px solid aqua;
+           border: 1px outset palevioletred;
             border-radius: 3px;
-            width: 350px;
+            max-width: 350px;
             margin: auto;
             padding: 30px 20px  30px 20px;
-            /* margin-top: 35px; */
-            background-color: white;
+           color: white;
+            background-color: rgba(0, 0, 0, 0.3);
             
         }
        
@@ -55,16 +54,15 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
 
-        a {
-           
+        a {      
             text-decoration: none;
-           color: black;
-           
+            color: white;        
+        }
+        a:hover {
+            color: white;      
         }
 
-        a:hover {
-            color: turquoise;
-        }
+       
         .validation{
             background-color: rgba(228, 138, 138, 0.5);
             color: red;
@@ -84,9 +82,9 @@
         <p class="validation p-2 rounded-1" hidden>Invalid Email Address or Password</p>
         <input class="form-control mt-3 rounded-3 border-0 p-2 "  style="background-color: white; box-shadow: 1px 1px 4px lightblue;" type="email" placeholder="Email Address" id="address">
        
-        <div class="mt-3 rounded-3 p-2 " style="background-color: white; box-shadow: 1px 1px 4px lightblue;">
-            <input class="  border-0 " style="width: 260px; outline: none;"  type="password" placeholder="Password" id="password">
-           <img id="change" onclick="toggle()" width="20px" src="hide.png" alt="">
+        <div class="mt-3 rounded-3 p-2  d-flex justify-content-between" style="background-color: white; box-shadow: 1px 1px 4px lightblue;">
+            <input class=" border-0 " style="width: 90%; outline: none;"  type="password" placeholder="Password" id="password">
+           <img id="change" onclick="toggle()" width="25px" src="hide.png" alt="">
         </div>
         <input class="mt-4" type="checkbox" name="text" id="">Remember me 
         
@@ -94,7 +92,7 @@
        
         <button class="form-control mt-3 rounded-3 border-0 btn-success " ><a href="SignUp.html" class="text-white">Create an account</a></button>
        
-        <div class="ps-5 pe-5 text-center mt-2 "><a href="#" class="">Forgot your password? Didn't receive confirmation  instructions?</a></div>
+        <div class=" text-center mt-2 "><a href="#" class="">Forgot your password? Didn't receive confirmation  instructions?</a></div>
     </form>
 </body>
 <script>

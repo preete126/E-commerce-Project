@@ -172,10 +172,10 @@ window.addEventListener('load', ()=>{
 getItem.map((value, index) => {
     document.querySelector('.popular').innerHTML +=
     `
-    <a href="ToaddCart.html" id= "incre" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue; " onclick = "moveM(${index})" >
+    <a href="view-item.html" id= "incre" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue; " onclick = "moveM(${index})" >
         <div class="loop2" ">
         <img width="100%" height="200px" id="increase" src="${value.image}" alt="">
-        <div id="title" style="height:40px;">${value.title}</div>
+        <div id="title" style="height:60px;">${value.title}</div>
         <div id="title" class="fs-4"> <strike>N</strike> ${value.price}</div>
         </div>
     <a/>
@@ -184,8 +184,8 @@ getItem.map((value, index) => {
 getCart.map((value, index) => {
     document.querySelector('.like').innerHTML +=
     `
-    <a href="ToaddCart.html" id= "incre" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue; " onclick = "move(${index})" >
-        <div class="loop2" ">
+    <a href="view-item.html" id= "incre" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue; " onclick = "move(${index})" >
+        <div class="loop2 " >
         <img width="100%" height="200px" id="increase" src="${value.image}" alt="">
         <div id="title" style="height:60px;">${value.title}</div>
         <div id="title" class="fs-5"> <strike>N</strike> ${value.price}</div>

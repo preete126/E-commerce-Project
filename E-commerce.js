@@ -200,7 +200,7 @@ let MensWear = [
     popularArr.map((value, index) => {
         document.querySelector('.popular').innerHTML +=
         `
-        <a href="ToaddCart.html" style= "background-color: white;margin-top: 10px; box-shadow: 1px 1px 4px lightblue; " onclick = "moveP(${index})">
+        <a href="view-item.html" style= "background-color: white;margin-top: 10px; box-shadow: 1px 1px 4px lightblue; " onclick = "moveP(${index})">
             <div class="loop1" " >
             <img width="100%"  src="${value.image}" alt="">
             <div>${value.title}</div>
@@ -212,7 +212,7 @@ let MensWear = [
     Toparr.map((value, index) => {
         document.querySelector('.topdeal').innerHTML +=
         `
-        <a href="ToaddCart.html" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue; " onclick = "moveT(${index})" >
+        <a href="view-item.html" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue; " onclick = "moveT(${index})" >
             <div class="loop2" ">
             <img width="100%" height="200px" id="increase" src="${value.image}" alt="">
             <div id="title">${value.title}</div>
@@ -223,10 +223,10 @@ let MensWear = [
     sideDisplay.map((value, index) => {
         document.getElementById('sideDisplay').innerHTML +=
         `
-        <a href="ToaddCart.html" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue;" onclick = "moveS(${index})">
+        <a href="view-item.html" style= "background-color: white; width:45%; margin-top: 10px; box-shadow: 1px 1px 4px lightblue;" onclick = "moveS(${index})">
             <div class="loop3" ">
-            <img width="100%" height="200px" id="increase" src="${value.image}" alt="">
-            <div id="title">${value.title}</div>
+            <img width="100%" height="200px"  id="sideImage" src="${value.image}" alt="">
+            <div id="title" style="height:60px;">${value.title}</div>
             <div id="title" class="fs-4"> <strike>N</strike> ${value.price}</div>
             </div>
         </a>
@@ -235,7 +235,7 @@ let MensWear = [
     topsell.map((value, index) => {
         document.getElementById('topsell').innerHTML +=
         `
-        <a href="ToaddCart.html" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue; " onclick = "moveTS(${index})" >
+        <a href="view-item.html" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue; " onclick = "moveTS(${index})" >
             <div class="loop4" ">
             <img width="100%" height="200px" id="increase" src="${value.image}" alt="">
             <div id="title" style="height:40px;">${value.title}</div>
@@ -247,7 +247,7 @@ let MensWear = [
     bagColl.map((value, index) => {
         document.getElementById('bags').innerHTML +=
         `
-        <a href= "ToaddCart.html" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue;"  onclick = "moveB(${index})">
+        <a href= "view-item.html" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue;"  onclick = "moveB(${index})">
             <div class="loop4" ">
             <img width="100%" height="200px" id="increase" src="${value.image}" alt="">
             <div id="title" style="height:40px;">${value.title}</div>
@@ -259,7 +259,7 @@ let MensWear = [
     shoeColl.map((value, index) => {
         document.getElementById('shoes').innerHTML +=
         `
-        <a href = "ToaddCart.html" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue;"  onclick = "moveSH(${index})" >
+        <a href = "view-item.html" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue;"  onclick = "moveSH(${index})" >
             <div class="loop2" ">
             <img width="100%" height="200px" id="increase" src="${value.image}" alt="">
             <div id="title" style="height:40px;">${value.title}</div>
@@ -271,10 +271,10 @@ let MensWear = [
     ladyFashion.map((value, index) => {
         document.getElementById('ladyFashion').innerHTML +=
         `
-        <a href= "ToaddCart.html" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue;"  onclick = "moveL(${index})">
+        <a href= "view-item.html" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue;"  onclick = "moveL(${index})">
             <div class="loop5" ">
             <img width="100%" height="200px" id="increase" src="${value.image}" alt="">
-            <div id="title" style="height:40px;">${value.title}</div>
+            <div id="title" style="height:60px;">${value.title}</div>
             <div id="title" class="fs-4"> <strike>N</strike> ${value.price}</div>
             </div>
         </a>
@@ -283,10 +283,10 @@ let MensWear = [
     MensWear.map((value, index) => {
         document.getElementById('MensWear').innerHTML +=
         `
-        <a href="ToaddCart.html" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue; " onclick = "moveM(${index})" >
+        <a href="view-item.html" style= "background-color: white; margin-top: 10px; box-shadow: 1px 1px 4px lightblue; " onclick = "moveM(${index})" >
             <div class="loop2" ">
             <img width="100%" height="200px" id="increase" src="${value.image}" alt="">
-            <div id="title" style="height:40px;">${value.title}</div>
+            <div id="title" style="height:60px;">${value.title}</div>
             <div id="title" class="fs-4"> <strike>N</strike> ${value.price}</div>
             </div>
         <a/>

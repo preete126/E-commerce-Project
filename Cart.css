@@ -10,7 +10,7 @@ nav {
 }
 
 .heading {
-    padding: 0px 33px 20px 33px;
+    padding: 0px 30px 20px 30px;
     background-color: rgb(248, 248, 248);
 
 }
@@ -69,7 +69,6 @@ nav {
 #searchEng {
     width: 350px;
     padding: 12px;
-    margin-left: -5px;
     outline: none;
     border: none;
 
@@ -78,7 +77,6 @@ nav {
 #searcheng {
     width: 350px;
     padding: 12px;
-    margin-left: -5px;
     outline: none;
     border: none;
 
@@ -94,7 +92,6 @@ nav {
 }
 
 .title {
-    margin-top: -20px;
     font-size: 30px;
     font-family: "Sofia";
     text-align: center;
@@ -156,12 +153,10 @@ nav {
 }
 
 #itemNav {
-    padding-left: 20px;
+    padding-left: 17px;
     padding-right: 33px;
-    
-    /* margin-top: 120px; */
     display: flex;
-    justify-content: space-between;
+   justify-content: space-between;
 }
 
 .hover-effect:hover {
@@ -359,22 +354,25 @@ a:hover {
     margin-top: 10px;
 
 }
+
 #descriptions{
-    width: 350px;
-    height: 100vh;
-    background-color: white;
-    box-shadow: 1px 1px 4px lightblue;
-    padding: 10px;
+    width: 30%;
+   height: 100vh;
+   background-color: white;
+   box-shadow: 1px 1px 4px lightblue;
+   padding: 10px;
 }
 #itemDisplay{
-    width: 850px;
-   padding-left: 100px;
+  width: 70%;
+   /* display: flex;
+   justify-content: space-evenly; */
+   padding-top: 50px;
 }
 
 .Resize{
     width: 500px;
-    /* padding: 10px; */
-    margin: 30px;
+    padding: 10px;
+    margin-bottom: 30px;
     background-color: white;
     box-shadow: 1px 1px 4px lightblue;
 }
@@ -417,7 +415,7 @@ a:hover {
     text-align: center;
     color: white;
     font-size: 18px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
 
 }
 #sub{
@@ -470,10 +468,34 @@ a:hover {
 #im{
     display: none;
 }
-@media(max-width:440px){
+
+@media(max-width:590px){
+    .loop2{
+        width: 170px;
+    }
+    .loop2 #increase{
+        height: 120px;
+    }
+}
+@media(max-width:465px){
+    .loop2{
+         width: 100% !important;
+     }
+    .popular > a{
+         width: 100% !important;
+     }
+    .loop2 > #increase{
+         height: 100% !important;
+     }
+ }
+
+@media(max-width:446px){
     #searcheng{
         width: 170px !important;
     }
+}
+@media(max-width:440px){
+   
     .nav2{
         font-size: 20px !important;
     }
@@ -482,21 +504,27 @@ a:hover {
         width: 350px;
         height: 59vh;
     }
+    section{
+        padding: 15px !important;
+    }
+    .heading{
+        padding: 0px 15px 20px 15px;
+       }
     .loop2{
         width: 150px;
     }
     #increase{
         height: 120px;
     }
-    #title{
-        font-size: 11px !important;
-    }
-    .Resize{
-        flex-direction: column;
-        width: 270px;
-        padding: 10px;
-        
-     }
+    #itemNav {
+        padding-left: 0px;
+        padding-right: 15px;
+    } 
+    .dFlex{
+        padding: 0% !important;
+        margin: 15px !important;
+
+    }  
 }
 @media(max-width:600px){
     #category{
@@ -507,27 +535,8 @@ a:hover {
         border-bottom-left-radius: 3px;
 
     }
-    .Resize{
-        /* flex-direction: column; */
-        width: 450px !important;
-        padding: 10px;
-        gap: 0px !important;
-        
-     }
 }
 @media(max-width:930px){
-    #itemDisplay{
-        padding-left: 0px;
-        width: 500px;
-        gap: 0px !important;
-    }
-    .dFlex{
-        flex-direction: column;
-    }
-    /* .Resize{
-        gap: 3px !important;
-        width: 435px;
-    } */
     .font{
         font-size: 14px !important;
     }
@@ -560,41 +569,23 @@ a:hover {
     .conclussion{
         font-size: 13px !important;
     }
-    #descriptions{
-        display: none;
-    }
-    .Resize{
-        /* flex-direction: column; */
-        width: 600px;
-        padding: 10px;
-        gap: 70px !important;
-        
-     }
-     #itemDisplay{
-        width: 300px;
-       
-    }
-    .images{
-        width: 100%;
-        height: 220px;
-    }
 }
 
+@media(max-width:580px){
+    .Resize{
+        flex-direction: column;
+        width: 100%;
+     }
+     .Resize  img{
+         height: 100% !important;
+     }
+}
 @media(max-width:550px){
-   
-   
-   
     .images{
         width: 100%;
         height: 220px;
     }
-    .Resize{
-        flex-direction: column;
-        width: 280px !important;
-        padding: 10px;
-        gap: 70px !important;
-        
-     }
+   
     
 }
 @media(max-width:730px){
@@ -609,13 +600,7 @@ a:hover {
     #img{
         width: 100%;
     }
-    .Resize{
-        /* flex-direction: column; */
-        width: 500px;
-        padding: 10px;
-        gap: 20px !important;
-        
-     }
+    
      .images{
         width: 100%;
         height: 220px;
@@ -704,5 +689,51 @@ a:hover {
     #im{
         display: block;
     }
+    #descriptions{
+        display: none;
+    }
+    .dFlex{
+        flex-direction: column;
+        gap: 0px;
+    }
+    #itemDisplay{
+        padding: 0px !important;
+        width: 100%;
+    }
 }
-
+@media(max-width:400px){
+    
+    #newaccount, .home_acc{
+        display: none;
+    }
+  }
+  @media(max-width:480px){
+      
+    .home_acc{
+        font-size: 14px !important;
+        font-weight: bold !important;
+    }
+  }
+  @media(max-width:361px){
+  
+    .canvas_btn{
+        display: none !important;
+    }
+    #searcheng, #searchEng{
+        width: 70% !important;
+    }
+    #search{
+        width: 20% !important;
+    }
+    #itemNav {
+      padding-left: 15px;
+  }
+}
+@media(max-width:320px){
+    .redu{
+        max-width:220px ;
+    }
+    .popular{
+        padding: 10px;
+    }
+}
